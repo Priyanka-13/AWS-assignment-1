@@ -1,12 +1,9 @@
 
 
   #  Create a vpc not by wizard this time but manually, having 2 public subnets and 2 private subnets and 2 protected subnets.
-
-    setup should be highly available
-
-    Create 1 IGW and 2 NGW in each availability zone and make the appropriate routes in route tables
-
-    Main route will remain intact, instead make 4 route tables
+     setup should be highly available
+     Create 1 IGW and 2 NGW in each availability zone and make the appropriate routes in route tables
+     Main route will remain intact, instead make 4 route tables
 
     public_route_table
     private_route_table_1
@@ -25,11 +22,11 @@ Attach the IGW to public and NAT GW to private in route table
 
     Server-2 should serve a webpage that would say "Hi! i am server 2"
 
+Install LAMP in both private server
+Create HTML file for private server
+Now we need to create the load balancer in our VPC to server thse two web pages
+Create load balancer and make high availibilty and attach both private server
+Then serve web pages for both private server
 
 
-
-Now create 2 instance in Private and 1 in publicSecurity group settiings should open the port
-
-ICMP IPV4 SSH HTTP HTTPS
-Security group settiings should open the port
 
