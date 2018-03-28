@@ -24,7 +24,10 @@ Attach the IGW to public and NAT GW to private in route table
 
 Install LAMP in both private server
 Create HTML file for private server
-Now we need to create the load balancer in our VPC to server thse two web pages
+
+
+ # Now we need to create the load balancer in our VPC to server thse two web pages
+ 
 Create load balancer and make high availibilty and attach both private server
 Then serve web pages for both private server
 
