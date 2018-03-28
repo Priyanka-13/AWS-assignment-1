@@ -11,6 +11,10 @@
 # Create two instances within the vpc that you created in task 1, windows instance in public subnet and linux instance in private subnet. check if linux is pingable from windows and vice versa.
 
 We created two instances,one is window with attaching public subnet and another one is linux with attaching private subnet
+Security group settiings should open the port
+ICMP IPV4 SSH HTTP HTTPS
+Now we are pingable from wondow to linux and viceversa.
+
 
  # Delete all the instances and now make those two instances that you created in previous task using aws-cli.
 
