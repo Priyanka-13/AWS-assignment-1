@@ -21,4 +21,4 @@ Now we are pingable from wondow to linux and viceversa.
   First Install awscli
   Set AWS configure
   aws ec2 run-instances --image-id ami-1853ac65 --count 1 --instance-type t2.micro --key-name Priyanka --security-group-ids sg-36b0cc40 --subnet-id subnet-ce013693
-  
+  Same create for second instance using above command
