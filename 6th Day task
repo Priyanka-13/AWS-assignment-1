@@ -1,0 +1,23 @@
+create a Jenkins job which will list out instances that are in stopped state from last "n" number of days.
+
+1)First step: su - jenkins
+
+2)Set AWS configure in jenkins user
+
+3)Go to jenkins GUI
+
+4)Create job
+   build > execute shell > aws ec2 describe-instances --filters "Name=instance-state-name,Values=stopped" "Name=launch-time,Values=${DATE}*" --query 'Reservations[].Instances[].[InstanceId,LaunchTime]' --output text
+   
+5)Select string parameter for varible, put DATE varible
+
+6)Run build with parameter, put date for stopped instances (2018-03-26*)
+
+7)Go to console output 
+
+Started by user anonymous
+Building in workspace /var/lib/jenkins/workspace/aws_EC2stopped
+[aws_EC2stopped] $ /bin/sh -xe /tmp/jenkins6131775289684402692.sh
++ aws ec2 describe-instances --filters Name=instance-state-name,Values=stopped Name=launch-time,Values=2018-03-26** --query Reservations[].Instances[].[InstanceId,LaunchTime] --output text
+i-04a5cd34bb5f2c441	2018-03-26T06:30:19.000Z
+Finished: SUCCESS
